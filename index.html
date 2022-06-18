@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>数据可视化(六一专属)</h1>
+        <div class="时间"></div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000); //開始运行
+            function time() {
+              clearTimeout(t); //清除定时器
+              dt = new Date();
+              var y = dt.getFullYear();
+              var mt = dt.getMonth() + 1;
+              var day = dt.getDate();
+              var h = dt.getHours(); //获取时
+              var m = dt.getMinutes(); //获取分
+              var s = dt.getSeconds(); //获取秒
+              document.querySelector(".时间").innerHTML =
+                "当前时间：" +
+                y +
+                "年" +
+                mt +
+                "月" +
+                day +
+                "-" +
+                h +
+                "时" +
+                m +
+                "分" +
+                s +
+                "秒";
+              t = setTimeout(time, 1000); //设定定时器，循环运行
+            }
+          </script>
+    </header>
+    <!-- 主体部分 -->
+    <section class="主体部分">
+        <!-- 主体里面的三个大部分 -->
+        <div class="左">
+            <div class="模板盒子 图1">
+               <div class="内容">
+                   <h2>就业行业
+                       <span>2021</span>
+                       <span>2022</span>
+                   </h2>
+                   <div class="图表"></div>
+                   <div class="下面两个角"></div>
+               </div>
+            </div>
+            <div class="模板盒子 图2">
+               <div class="内容">
+                   <h2>就业增减数据
+                       <span>2020</span>
+                       <span>2021</span>
+                   </h2>
+                   <div class="图表"></div>
+                   <div class="下面两个角"></div>
+               </div>
+            </div>
+            <div class="模板盒子 图3">
+               <div class="内容">
+                   <h2>年龄分布</h2>
+                   <div class="图表"></div>
+                   <div class="下面两个角"></div>
+               </div>
+            </div>
+        </div>
+        <div class="中">
+            <div class="上部数字模快">
+                <div class="数字">
+                    <ul>
+                        <li>131400</li>
+                        <li>250000</li>
+                    </ul>
+                </div>
+                <div class="文字">
+                    <ul>
+                        <li>前端需求人数</li>
+                        <li>市场供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="中间地图模块">
+                <div class="背景图"></div>
+                <div class="旋转图1"></div>
+                <div class="旋转图2"></div>
+                <div class="sss">就业人员往返地区</div>
+
+                <div class="地图">
+                </div>
+            </div>
+        </div>
+        <div class="右">
+            <div class="模板盒子 图1">
+                <div class="内容">
+                    <h2>能力需求分布
+                        <span>2021</span>
+                        <span>2022</span>
+                    </h2>
+                    <div class="图表"></div>
+                    <div class="下面两个角"></div>
+                </div>
+            </div>
+            <div class="模板盒子 图2">
+                <div class="内容">
+                    <h2>就业行业预测
+                        <span>2023</span>
+                        <span>2024</span>
+                    </h2>
+                    <div class="图表"></div>
+                    <div class="下面两个角"></div>
+                </div>
+            </div>
+            <div class="模板盒子 图3">
+                <div class="内容">
+                    <h2>就业人员分布
+                        <span>2021</span>
+                        <span>2022</span>
+                    </h2>
+                    <div class="图表"></div>
+                    <div class="下面两个角"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+<!--    需要引入中国地图js才能使用-->
+    <script src="./js/china.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+color: #d58512;
+
+}
+/*申明图标字体*/
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+body {
+  background: url("../img/bg.jpg") no-repeat top center;
+  line-height: 1.15;
+}
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url(../img/head_bg.png) no-repeat top center;
+  background-size: 100% 100%;
+  border-bottom: 1px solid slateblue;
+}
+header h1 {
+  font-size: 0.5rem;
+  text-align: center;
+  line-height: 1rem;
+  color: #1fa4e0;
+}
+header .时间 {
+  position: absolute;
+  color: white;
+  top: 0;
+  right: 0.375rem;
+  line-height: 0.9375rem;
+  font-size: 0.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.主体部分 {
+  min-width: 1024px;
+  max-width: 1920px;
+  padding: 0.125rem 0.125rem 0;
+  height: 500px;
+  display: flex;
+}
+.主体部分 .左,
+.主体部分 .右{
+  flex: 3;
+}
+.主体部分 .中{
+  flex: 5;
+  margin: 0 0.125rem 0.1875rem;
+  height: 13.0375rem;
+  overflow: hidden;
+}
+.主体部分 .模板盒子{
+  position: relative;
+  height: 3.875rem;
+  padding: 0 0.1875rem 0.5rem;
+  border: 1px solid rgba(25,186,139,0.3);
+  margin-bottom: 0.1875rem;
+  background: url("../img/line(1).png") rgba(255,255,255,0.03);
+}
+/*给四角添加*/
+.主体部分 .模板盒子:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+}
+.主体部分 .模板盒子:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+}
+.主体部分 .模板盒子 .下面两个角{
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+}
+.主体部分 .模板盒子 .下面两个角:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+}
+.主体部分 .模板盒子 .下面两个角:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+}
+.主体部分 .模板盒子 .内容 h2{
+  height: 0.6rem;
+  color: #fff;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.25rem;
+  font-weight: 400;
+}
+.主体部分 .模板盒子 .内容 .图表{
+  height: 3rem;
+}
+
+
+/*中部*/
+.中 .上部数字模快{
+  background: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+}
+.中 .上部数字模快 .文字{
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.中 .上部数字模快 .数字 ul{
+  display: flex;
+  border: 1px solid;
+  border-image-source: linear-gradient(to right,#02a6b5,#9d9d9d, #02a6b5);
+  border-image-slice: 1;
+}
+.中 .上部数字模快 .数字 ul li {
+  /*  每个li都占一份*/
+  flex: 1;
+  text-align: center;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  background-image: linear-gradient(to right,#00FFE3, #00FFE3,#9d9d9d);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow:0 0 10px #9d9d9d;
+  padding: 0 0.5rem 0;
+  /*  规定字体*/
+  font-family: electronicFont;
+  font-weight: bold;
+}
+.中 .上部数字模快 .数字 ul li:nth-child(1){
+  border-right: 1px solid #02a6b590;
+}
+
+.中 .上部数字模快 .文字 ul{
+  display: flex;
+}
+.中 .上部数字模快 .文字 ul li{
+  flex: 1;
+  text-align: center;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.24rem;
+  padding-top: 0.125rem;
+  background-image: linear-gradient(to right,#02a6b5,white);
+  -webkit-background-clip: text;
+  color: transparent;
+  /*color:#a6e1ec;*/
+}
+/*中间地图模块*/
+.中 .中间地图模块{
+  position: relative;
+  height:10.125rem;
+}
+
+.中 .中间地图模块 .背景图{
+  /*透明度*/
+  opacity: 0.4;
+  position: absolute;
+/*  居中*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 6.475rem;
+  height: 6.475rem;
+  background: url("../img/map.png");
+  background-size: 100% 100%;
+  animation: aa1 20s linear infinite; /*linear : 匀速   infinite:重复*/
+
+}
+
+.中 .中间地图模块 .旋转图1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 8.0375rem;
+  height: 8.0375rem;
+  background: url("../img/lbx.png");
+  animation: aa2 15s linear infinite; /*linear : 匀速   infinite:重复*/
+}
+@keyframes aa1 {
+  form{
+  /*  位置不变*/
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  to{
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+@keyframes aa2 {
+  form{
+    /*  位置不变*/
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  to{
+    transform: translate(-50%,-50%) rotate(-360deg);
+  }
+}
+.中 .中间地图模块 .旋转图2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 9.075rem;
+  height: 9.075rem;
+  background: url("../img/jt.png") no-repeat;
+  animation: aa2 10s linear infinite; /*linear : 匀速   infinite:重复*/
+}
+
+.中 .中间地图模块 .地图{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10.125rem;
+  color: #a6e1ec;
+}
+.中 .中间地图模块 .sss{
+  width: 100%;
+  position: absolute;
+  color: #a6e1ec;
+  font-size: 0.3rem;
+  font-weight: 500;
+  text-align: center;
+  top: 10px;
+}
+
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
+}
+
+/*新添加的年份切换*/
+.左 .图2 h2 span,
+.左 .图1 h2 span,
+.右 .图1 h2 span,
+.右 .图2 h2 span,
+.右 .图3 h2 span{
+  color: white;
+  cursor: pointer;
+}
+

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+body{
+    background: url("../img/bg.jpg") no-repeat top center;
+    line-height: 1.15;
+}
+header{
+    position: relative;
+    height:1.25rem;
+    // 背景图
+    background: url(./images/head_bg.png) no-repeat top center;
+    background-size: 100% 100%;
+    border-bottom: 1px solid slateblue;
+
+    h1{
+        font-size: 0.475rem;
+        color: white;
+        text-align: center;
+        line-height: 1rem;
+    }
+    .时间{
+        position: absolute;
+        color: white;
+        top: 0;
+        right: 0.375rem;
+        line-height: 0.9375rem;
+        font-size: 0.25rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+.主体部分{
+    // 设置最小最大宽度,缩小放大到一定宽度之后就不会继续变化
+    min-width: 1024px;
+    max-width: 1920px;
+    padding: 0.125rem 0.125rem 0;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+}
